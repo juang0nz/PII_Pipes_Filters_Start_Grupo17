@@ -10,7 +10,7 @@ namespace CompAndDel
         {
          //ejer1
          PictureProvider provider = new PictureProvider();
-         IPicture picture = provider.GetPicture(@"/home/apereira/Documentos/anthony_universidad/prog2_v2/PII_Pipes_Filters_Start_Grupo17/src/Program/beer.jpg");
+         IPicture picture = provider.GetPicture(@"C:\Users\facup\OneDrive\Desktop\facultad\p2\PII_Pipes_Filters_Start_Grupo17\src\Program\beer.jpg");
 
          //creo  filtros
          IFilter filtro1 = new FilterNegative();
@@ -23,22 +23,23 @@ namespace CompAndDel
 
          //mando la imagen
          pipe1.Send(picture);
-         provider.SavePicture(pipe1.Send(picture), @"/home/apereira/Documentos/anthony_universidad/prog2_v2/PII_Pipes_Filters_Start_Grupo17/src/Program/beer2.jpg");
+         provider.SavePicture(pipe1.Send(picture), @"C:\Users\facup\OneDrive\Desktop\facultad\p2\PII_Pipes_Filters_Start_Grupo17\src\Program\beer.jpg");
 
 
-
+/*
          //ejer2
          //creo un filtro
-         IFilter persistentFilter = new FilterPersistent(@"/home/apereira/Documentos/anthony_universidad/prog2_v2/PII_Pipes_Filters_Start_Grupo17/src/Program/luke.jpg");
+         IFilter persistentFilter = new FilterPersistent(@"C:\Users\facup\OneDrive\Desktop\facultad\p2\PII_Pipes_Filters_Start_Grupo17\src\Program\beer.jpg");
 
          //creo la tuberia
          IPipe persistentPipe = new PipeSerial(persistentFilter, pipe2);
-         pipe1 = new PipeSerial(filtro2, persistentPipe);
+         pipe1 = new PipeSerial(persistentFilter, persistentPipe);
+
          provider.SavePicture(pipe1.Send(picture), @"FinalResultExcercise2.jpg");
 
 
 
-
+*/
 
 
       }
