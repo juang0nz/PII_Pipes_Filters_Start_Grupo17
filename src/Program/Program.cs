@@ -26,7 +26,7 @@ namespace CompAndDel
          provider.SavePicture(pipe1.Send(picture), @"C:\Users\facup\OneDrive\Desktop\facultad\p2\PII_Pipes_Filters_Start_Grupo17\src\Program\beer.jpg");
 
 
-/*
+
          //ejer2
          //creo un filtro
          IFilter persistentFilter = new FilterPersistent(@"C:\Users\facup\OneDrive\Desktop\facultad\p2\PII_Pipes_Filters_Start_Grupo17\src\Program\beer.jpg");
@@ -39,7 +39,7 @@ namespace CompAndDel
 
 
 
-*/
+
 
 
       }
