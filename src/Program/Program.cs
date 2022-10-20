@@ -23,7 +23,7 @@ namespace CompAndDel
 
          //mando la imagen
          pipe1.Send(picture);
-         provider.SavePicture(pipe1.Send(picture), @"/home/apereira/Documentos/anthony_universidad/prog2_v2/PII_Pipes_Filters_Start_Grupo17/src/Program/beer2.jpg");
+         provider.SavePicture(pipe1.Send(picture), @"/home/apereira/Documentos/anthony_universidad/prog2_v2/PII_Pipes_Filters_Start_Grupo17/src/Program/beer.jpg");
 
 
 
@@ -37,7 +37,10 @@ namespace CompAndDel
          provider.SavePicture(pipe1.Send(picture), @"FinalResultExcercise2.jpg");
 
 
-
+         FilterTwitterShare twitterFilter = new FilterTwitterShare("ejer 3\n va va va team 17", @"TwitterPicture.jpg");
+         IPipe twitterPipe = new PipeSerial(twitterFilter, new PipeNull());
+         IPicture pictureTwitterUpload = provider.GetPicture(@"FinalResultExcercise2.jpg");
+         twitterPipe.Send(pictureTwitterUpload);
 
 
 
