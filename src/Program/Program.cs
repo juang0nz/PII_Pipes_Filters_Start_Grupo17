@@ -44,7 +44,8 @@ namespace CompAndDel
             IPicture pictureTwitterUpload = provider.GetPicture(@"FinalResultExcercise2.jpg");
             twitterPipe.Send(pictureTwitterUpload);
         
-            FilterCognitiveFace cog = new FilterCognitiveFace(true, Color.GreenYellow);
+            FilterCognitiveFace cog = new FilterCognitiveFace("");
+            
          
          }
 

@@ -1,4 +1,5 @@
 using TwitterUCU;
+
 namespace CompAndDel.Filters
 {
     public class FilterTwitterShare : IFilter
