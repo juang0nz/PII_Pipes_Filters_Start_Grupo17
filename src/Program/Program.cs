@@ -1,6 +1,7 @@
 ﻿using System;
 using CompAndDel.Pipes;
 using CompAndDel.Filters;
+using System.Drawing;
 
 namespace CompAndDel
 {
@@ -42,6 +43,12 @@ namespace CompAndDel
             IPipe twitterPipe = new PipeSerial(twitterFilter, new PipeNull());
             IPicture pictureTwitterUpload = provider.GetPicture(@"FinalResultExcercise2.jpg");
             twitterPipe.Send(pictureTwitterUpload);
-      }
+        
+            FilterCognitiveFace cog = new FilterCognitiveFace(true, Color.GreenYellow);
+         
+         }
+
+
     }
+    
 }
